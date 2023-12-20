@@ -33,10 +33,34 @@ applications.
   files.
 * Or simply run it in command line.
 
+## How to Run
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:wallaceespindola/password-hashing-security-java.git
+
+cd password-hashing-security-java
+```
+
+2. Build the project with Maven:
+
+```bash
+mvn clean install
+```
+
+3. Running the main examples:
+
+```bash
+java -jar ./target/password-hashing-security.jar
+```
+
+4. You can also run the individual unit tests for each algorithm on your IDE.
+
 ## Author
 
 * Wallace Espindola, Sr. Software Engineer / Java & Python Dev (wallace.espindola@gmail.com)
 
 ## License
 
-**Free Software, Apache 2.0**
+* This project is released under the Apache 2.0 License. See the LICENSE file for details.
