@@ -37,4 +37,9 @@ public class Argon2Hashing {
         generator.generateBytes(password.toCharArray(), result);
         return Base64.getEncoder().encodeToString(result);
     }
+
+    public static boolean verifyPassword(String inputPassword, String storedHash, byte[] salt) {
+        String newHash = hashPasswordWithSalt(inputPassword, salt);
+        return newHash.equals(storedHash);
+    }
 }

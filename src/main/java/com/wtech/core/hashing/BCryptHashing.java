@@ -8,4 +8,11 @@ public class BCryptHashing {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder.encode(password);
     }
+
+    public static boolean verifyPassword(String inputPassword, String storedHash) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        return encoder.matches(inputPassword, storedHash);
+    }
 }
+
+

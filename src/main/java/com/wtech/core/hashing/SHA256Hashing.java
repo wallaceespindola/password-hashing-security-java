@@ -24,5 +24,10 @@ public class SHA256Hashing {
         byte[] hashedPassword = md.digest(password.getBytes());
         return Base64.getEncoder().encodeToString(hashedPassword);
     }
+
+    public static boolean verifyPassword(String inputPassword, String storedHash, byte[] salt) throws Exception {
+        String newHash = hashPasswordWithSalt(inputPassword, salt);
+        return newHash.equals(storedHash);
+    }
 }
 

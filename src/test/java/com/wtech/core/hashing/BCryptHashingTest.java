@@ -10,22 +10,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BCryptHashingTest {
 
+    public static final String TEST_PASSWORD = "TestPassword123";
+
     @Test
     public void testHashPassword() {
-        String originalPassword = "TestPassword123";
-        String hashedPassword = BCryptHashing.hashPassword(originalPassword);
+
+        String hashedPassword = BCryptHashing.hashPassword(TEST_PASSWORD);
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
         assertThat(hashedPassword).isNotNull();
         assertThat(hashedPassword).isNotBlank();
-        assertTrue(encoder.matches(originalPassword, hashedPassword), "Hashed password must match original");
+        assertTrue(encoder.matches(TEST_PASSWORD, hashedPassword), "Hashed password must match original");
     }
 
     @Test
     public void testHashPasswordReturnsNonNullNonEmptyString() {
-        String password = "TestPassword123";
-        String hashedPassword = BCryptHashing.hashPassword(password);
+
+        String hashedPassword = BCryptHashing.hashPassword(TEST_PASSWORD);
 
         assertNotNull(hashedPassword, "Hashed password should not be null");
         assertFalse(hashedPassword.isEmpty(), "Hashed password should not be empty");
@@ -33,8 +35,8 @@ public class BCryptHashingTest {
 
     @Test
     public void testHashPasswordReturnsConsistentLength() {
-        String password = "TestPassword123";
-        String hashedPassword = BCryptHashing.hashPassword(password);
+
+        String hashedPassword = BCryptHashing.hashPassword(TEST_PASSWORD);
 
         // Length of Base64-encoded 43-byte hash
         int expectedLength = Base64.getEncoder().encode(new byte[43]).length; // length equals to 60 in average
@@ -43,11 +45,21 @@ public class BCryptHashingTest {
 
     @Test
     public void testHashPasswordGeneratesUniqueHashes() {
-        String password = "TestPassword123";
-        String hashedPassword1 = BCryptHashing.hashPassword(password);
-        String hashedPassword2 = BCryptHashing.hashPassword(password);
+
+        String hashedPassword1 = BCryptHashing.hashPassword(TEST_PASSWORD);
+        String hashedPassword2 = BCryptHashing.hashPassword(TEST_PASSWORD);
 
         assertNotEquals(hashedPassword1, hashedPassword2, "Hashes of the same password should be unique due to different salts");
+    }
+
+    @Test
+    public void testVerifyHashedPassword() {
+
+        String storedHash = BCryptHashing.hashPassword(TEST_PASSWORD);
+
+        boolean isVerified = BCryptHashing.verifyPassword(TEST_PASSWORD, storedHash);
+
+        assertTrue(isVerified, "Hashes of the same password should be valid");
     }
 }
 

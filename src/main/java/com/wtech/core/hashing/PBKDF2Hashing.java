@@ -30,5 +30,10 @@ public class PBKDF2Hashing {
         byte[] hash = factory.generateSecret(spec).getEncoded();
         return Base64.getEncoder().encodeToString(hash);
     }
+
+    public static boolean verifyPassword(String inputPassword, String storedHash, byte[] salt) throws Exception {
+        String newHash = hashPasswordWithSalt(inputPassword, salt);
+        return newHash.equals(storedHash);
+    }
 }
 

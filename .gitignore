@@ -25,3 +25,7 @@ replay_pid*
 
 # IntelliJ files
 .idea
+
+# Compiled and temporarily generated files
+/target
+dependency-reduced-pom.xml
