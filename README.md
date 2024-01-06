@@ -69,6 +69,7 @@ java -jar ./target/password-hashing-security.jar
 * Wallace Espindola, Sr. Software Engineer / Java & Python Dev 
 * E-mail: wallace.espindola@gmail.com
 * LinkedIn: https://www.linkedin.com/in/wallaceespindola/
+* Website: https://wtechitsolutions.com/
 
 ## License
 
