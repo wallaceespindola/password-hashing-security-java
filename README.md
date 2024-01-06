@@ -55,11 +55,20 @@ mvn clean install
 java -jar ./target/password-hashing-security.jar
 ```
 
-4. You can also run the individual unit tests for each algorithm on your IDE.
+4. This project is using Java 21, if you want to run it with a previous version, modify the pom.xml and compile to your preferred version:
+
+```bash
+<maven.compiler.source>21</maven.compiler.source>
+<maven.compiler.target>21</maven.compiler.target>
+```
+
+5. You can also run the unit tests for each algorithm on your IDE at the path 'src/test/java'.
 
 ## Author
 
-* Wallace Espindola, Sr. Software Engineer / Java & Python Dev (wallace.espindola@gmail.com)
+* Wallace Espindola, Sr. Software Engineer / Java & Python Dev 
+* E-mail: wallace.espindola@gmail.com
+* LinkedIn: https://www.linkedin.com/in/wallaceespindola/
 
 ## License
 
