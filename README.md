@@ -71,6 +71,10 @@ java -jar ./target/password-hashing-security.jar
 * LinkedIn: https://www.linkedin.com/in/wallaceespindola/
 * Website: https://wtechitsolutions.com/
 
+## Article published
+
+* Dzone, December/2023: https://dzone.com/articles/secure-password-hashing-in-java
+
 ## License
 
 * This project is released under the Apache 2.0 License. See the LICENSE file for details.
