@@ -77,4 +77,5 @@ java -jar ./target/password-hashing-security.jar
 
 ## License
 
-* This project is released under the Apache 2.0 License. See the LICENSE file for details.
+* This project is released under the Apache 2.0 License. See the [LICENSE](https://github.com/wallaceespindola/password-hashing-security-java/blob/master/LICENSE) file for details.
+* Copyright © 2024 [Wallace Espindola](https://github.com/wallaceespindola/).
