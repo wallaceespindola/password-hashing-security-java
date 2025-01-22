@@ -2,6 +2,10 @@
 
 # Password Hashing Security in Java
 
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
+![Java](https://img.shields.io/badge/Built_with-Java-blue)
+![Maven](https://img.shields.io/badge/Powered_by-Maven-green)
+
 ## Introduction
 
 This project is dedicated to testing and validating various password hashing security implementations in Java. It
