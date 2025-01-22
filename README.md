@@ -1,4 +1,4 @@
-![Java](https://seeklogo.com/images/J/java-logo-CE0198242E-seeklogo.com.png)
+![Java](https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_168609.png)
 
 # Password Hashing Security in Java
 
