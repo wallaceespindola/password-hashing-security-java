@@ -22,3 +22,49 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Compiled and temporarily generated files
+/target
+dependency-reduced-pom.xml
+
+# Maven archetype specific files
+maven-archetype.iml
+
+# Visual Studio Code specific files
+.vscode
+.settings
+.project
+*.code-workspace
+
+# Jenv file for specifying the project java version
+.java-version
+
+
+# Gradle
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Eclipse
+.classpath
+.settings/
+.project
+bin/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.uml
+.shelf
+.idea/
+out/
+
+# Misc
+*.graphml
+
+# Mac
+.DS_Store
+.mvn/.develocity/
